@@ -1,0 +1,859 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jimmy Susanto - Data Science & Carbon Markets SME</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;500;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .about-text {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+        opacity: 0;
+      }
+      .about-text.show {
+        max-height: 500px;
+        opacity: 1;
+      }
+      @keyframes slow-rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .rotating-symbol {
+        animation: slow-rotate 18s linear infinite;
+        display: inline-block;
+        transform-origin: center;
+        transform-box: fill-box;
+      }
+
+      /* Mobile menu animations */
+      #mobile-menu {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      #mobile-menu.menu-open {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body class="bg-[#0f2925] text-white">
+    <header
+      class="container mx-auto px-6 py-6 flex justify-between items-center"
+    >
+      <div class="flex items-center">
+        <span class="text-xl font-bold">Jimmy Susanto</span>
+        <span class="text-yellow-200 text-4xl ml-1 -mt-6">&#1645;</span>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8 items-center">
+          <li>
+            <a href="#core-competencies" class="hover:text-gray-300"
+              >Core Competencies</a
+            >
+          </li>
+          <li>
+            <a href="#case-studies" class="hover:text-gray-300">Case Study</a>
+          </li>
+          <li>
+            <a href="#experience-snapshot" class="hover:text-gray-300"
+              >Experience</a
+            >
+          </li>
+          <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden text-gray-300 hover:text-white"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-[#0D1A17] w-3/4 z-50 hidden md:hidden"
+      >
+        <div class="container mx-auto px-6 py-6">
+          <div class="flex justify-between items-center mb-8">
+            <div class="text-xl font-bold">Jimmy Susanto</div>
+            <button
+              id="close-mobile-menu"
+              class="text-gray-300 hover:text-white"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <nav>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#core-competencies"
+                  class="block py-3 text-lg hover:text-gray-300 border-b border-green-950"
+                  >Core Competencies</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#case-studies"
+                  class="block py-3 text-lg hover:text-gray-300 border-b border-green-950"
+                  >Case Study</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#experience-snapshot"
+                  class="block py-3 text-lg hover:text-gray-300 border-b border-green-950"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="block py-3 text-lg hover:text-gray-300 border-b border-green-950"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-6 pb-16 relative">
+      <!-- Large decorative rotating symbol -->
+      <div
+        class="fixed right-0 top-96 transform -translate-y-1/2 -z-20 opacity-20"
+      >
+        <div
+          class="rotating-symbol text-[#18322D] text-[120vh] md:text-[150vh]"
+        >
+          &#xAFE;
+        </div>
+      </div>
+
+      <section class="py-32 max-w-4xl relative z-10">
+        <h2
+          class="text-2xl md:text-3xl md:leading-[1.4] lg:text-4xl font-thin mb-16"
+        >
+          Sustainability professional with a strong background in carbon and EAC
+          (Energy Attribute Certificate) markets, combined with expertise in
+          data analytics and dashboard development. I connect climate action
+          with data-driven insights to
+          <span class="font-medium border-b border-white"
+            >deliver impactful solutions.</span
+          >
+        </h2>
+        <a
+          href="#"
+          class="py-3 px-5 font-medium bg-white border border-white text-green-900 rounded-full hover:bg-transparent hover:border hover:border-white hover:text-white transition-colors duration-300 text-sm inline-block cursor-pointer mr-4"
+          >Download CV</a
+        >
+        <a
+          href="#"
+          id="moreAboutBtn"
+          class="py-3 px-5 trasition-colors duration-300 text-sm font-medium inline-block cursor-pointer"
+          >More about me</a
+        >
+        <p
+          id="aboutText"
+          class="text-lg text-gray-300 mt-8 leading-8 about-text font-normal"
+        >
+          I am a sustainability professional and data analyst with a background
+          in carbon and EAC (Energy Attribute Certificate) markets, combined
+          with strong expertise in data analytics and dashboard development. My
+          experience spans project origination, due diligence frameworks, and
+          procurement of carbon credits and green energy certificates, as well
+          as building automated analytics tools in Python, R, Power BI, and
+          Tableau to streamline decision-making. Having worked across Europe,
+          the Middle East, and Asia, I bring an international perspective to
+          market analysis, stakeholder engagement, and project evaluation. My
+          goal is to leverage data-driven insights to accelerate sustainable
+          business strategies and climate solutions.
+        </p>
+      </section>
+
+      <section id="core-competencies" class="py-32">
+        <h2 class="text-sm font-bold uppercase text-yellow-200 mb-2">
+          Core Competencies
+        </h2>
+        <h3 class="text-2xl md:text-3xl font-light mb-12">
+          Expertise across sustainability and data analytics
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div
+            class="flex flex-col border border-l-0 border-t-0 border-green-950 p-6 transition-all duration-300 bg-[#0D1A17] md:bg-transparent hover:bg-[#0D1A17] hover:cursor-pointer"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-4">
+              <img
+                src="assets/icons/ic_carbon.svg"
+                alt="Carbon Markets"
+                class="w-10 h-10"
+              />
+            </div>
+            <h4 class="text-md font-medium mb-2 mt-24">
+              Carbon Markets & Renewable Energy
+            </h4>
+            <p class="text-sm text-gray-300">
+              Origination, Due Diligence, Procurement of carbon credits and
+              energy attribute certificates.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col p-6 border border-t-0 border-green-950 transition-all duration-300 hover:bg-[#0D1A17] hover:cursor-pointer"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-4">
+              <img
+                src="assets/icons/ic_dataviz.svg"
+                alt="Data Analytics"
+                class="w-10 h-10"
+              />
+            </div>
+            <h4 class="text-md font-medium mb-2 mt-24">
+              Data Analytics & Visualization
+            </h4>
+            <p class="text-sm text-gray-300">
+              Power BI, Tableau, Python, RStudio for advanced data analysis and
+              interactive dashboards.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col p-6 border border-t-0 border-r-0 border-green-950 transition-all duration-300 bg-[#0D1A17] md:bg-transparent hover:bg-[#0D1A17] hover:cursor-pointer"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-4">
+              <img
+                src="assets/icons/ic_market.svg"
+                alt="Market Research"
+                class="w-10 h-10"
+              />
+            </div>
+            <h4 class="text-md font-medium mb-2 mt-24">
+              Market Research & Policy Analysis
+            </h4>
+            <p class="text-sm text-gray-300">
+              Article 6, CORSIA, JCM, NDCs - comprehensive policy and market
+              analysis expertise.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col p-6 border border-l-0 border-b-0 border-green-950 transition-all duration-300 hover:bg-[#0D1A17] hover:cursor-pointer"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-4">
+              <img
+                src="assets/icons/ic_dashboard.svg"
+                alt="Dashboard Development"
+                class="w-10 h-10"
+              />
+            </div>
+            <h4 class="text-md font-medium mb-2 mt-24">
+              Dashboard Development
+            </h4>
+            <p class="text-sm text-gray-300">
+              Registry data automation, supply pipeline tracking, and real-time
+              analytics solutions.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col p-6 border border-b-0 border-green-950 transition-all duration-300 bg-[#0D1A17] md:bg-transparent hover:bg-[#0D1A17] hover:cursor-pointer"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-4">
+              <img
+                src="assets/icons/ic_sustainability.svg"
+                alt="Sustainability Reporting"
+                class="w-10 h-10"
+              />
+            </div>
+            <h4 class="text-md font-medium mb-2 mt-24">
+              Sustainability Reporting
+            </h4>
+            <p class="text-sm text-gray-300">
+              CSRD, ESRS introduction and implementation for comprehensive
+              sustainability disclosure.
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col p-6 border border-b-0 border-r-0 border-green-950 transition-all duration-300 hover:bg-[#0D1A17] hover:cursor-pointer"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-4">
+              <img
+                src="assets/icons/ic_multilingual.svg"
+                alt="Multilingual"
+                class="w-10 h-10"
+              />
+            </div>
+            <h4 class="text-md font-medium mb-2 mt-24">Multilingual</h4>
+            <p class="text-sm text-gray-300">
+              English, Mandarin, Indonesian, Malay, German A2 - facilitating
+              global collaboration.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="case-studies" class="py-32">
+        <h2 class="text-sm font-bold uppercase text-yellow-200 mb-2">
+          Portfolio Highlights
+        </h2>
+        <h3 class="text-2xl md:text-3xl font-light mb-12">
+          Key projects and research contributions
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Case Study 1 -->
+          <div
+            class="flex flex-col p-6 rounded-2xl border border-green-950 transition-all duration-300 hover:bg-[#0D1A17] hover:cursor-pointer bg-cover bg-center aspect-square hover:transition-all transform hover:duration-300 hover:scale-[1.02] hover:cursor-pointer"
+            style="background-image: url('assets/img/forest.jpg')"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-8">
+              <img
+                src="assets/icons/ic_dashboard.svg"
+                alt="Carbon Credit Dashboard"
+                class="w-10 h-10"
+              />
+            </div>
+            <div class="flex-grow"></div>
+            <h4 class="text-md font-medium mb-2">
+              Carbon Credit Origination Dashboard
+            </h4>
+            <p class="text-sm text-gray-300 mb-4">
+              Python-built dashboard integrating multiple carbon registry
+              datasets for actionable insights that accelerate origination and
+              de-risk buying.
+            </p>
+            <button
+              id="readMoreBtn1"
+              class="read-more-btn text-sm text-green-400 hover:text-green-300 self-start"
+            >
+              Read more →
+            </button>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div
+            class="flex flex-col p-6 rounded-2xl border border-green-950 transition-all duration-300 bg-cover bg-center aspect-square hover:transition-all transform hover:duration-300 hover:scale-[1.02] hover:cursor-pointer"
+            style="background-image: url('assets/img/carbon.jpg')"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-8">
+              <img
+                src="assets/icons/ic_dashboard.svg"
+                alt="Market Analytics"
+                class="w-10 h-10"
+              />
+            </div>
+            <div class="flex-grow"></div>
+            <h4 class="text-md font-medium mb-2">
+              Case Study: Carbon Dashboard
+            </h4>
+            <p class="text-sm text-gray-300 mb-4">
+              Developed a Power BI solution that consolidated multiple carbon
+              registries, providing actionable insights and accelerating
+              procurement decisions.
+            </p>
+            <button
+              id="readMoreBtn2"
+              class="read-more-btn text-sm text-green-400 hover:text-green-300 self-start"
+            >
+              Read more →
+            </button>
+          </div>
+
+          <!-- Case Study 3 -->
+          <div
+            class="flex flex-col p-6 rounded-2xl border border-green-950 transition-all duration-300 bg-cover bg-center aspect-square hover:transition-all transform hover:duration-300 hover:scale-[1.02] hover:cursor-pointer"
+            style="
+              background-image: url('assets/img/bajo.jpg');
+              background-position: bottom;
+            "
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-8">
+              <img
+                src="assets/icons/ic_articles.svg"
+                alt="Due Diligence Framework"
+                class="w-10 h-10"
+              />
+            </div>
+            <div class="flex-grow"></div>
+            <h4 class="text-md font-medium mb-2">Climate & Tourism Research</h4>
+            <p class="text-sm text-gray-300 mb-4">
+              Published findings in Journal of Cleaner Production, providing
+              evidence-based insights into how climate change influences island
+              economies and sustainable tourism planning.
+            </p>
+            <button
+              id="readMoreBtn3"
+              class="read-more-btn text-sm text-green-400 hover:text-green-300 self-start"
+            >
+              Read more →
+            </button>
+          </div>
+
+          <!-- Case Study 4 -->
+          <div
+            class="flex flex-col p-6 rounded-2xl border border-green-950 transition-all duration-300 bg-cover bg-center aspect-square hover:cursor-not-allowed hover:grayscale hover:brightness-75"
+            style="background-image: url('assets/img/geo.jpg')"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-8">
+              <img
+                src="assets/icons/ic_geo.svg"
+                alt="Research Publication"
+                class="w-10 h-10"
+              />
+            </div>
+            <div class="flex-grow"></div>
+            <h4 class="text-md font-medium mb-2">Geospatial Data Analysis</h4>
+            <p class="text-sm text-gray-300 mb-4">
+              Visualized spatial datasets using Python, creating interactive
+              maps that reveal geographic trends and support data-driven
+              decision making.
+            </p>
+            <span
+              class="w-36 rounded-full border border-white/40 px-2 py-1 text-xs text-white/100 bg-slate-900/80"
+              >&#128274; Restricted Content</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="experience-snapshot" class="py-32">
+        <h2 class="text-sm font-bold uppercase text-yellow-200 mb-2">
+          Experience Snapshot
+        </h2>
+        <h3 class="text-2xl md:text-3xl font-light mb-12">
+          Professional Journey & Certifications
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <!-- Career Timeline -->
+          <div
+            class="flex flex-col p-6 border border-l-0 border-t-0 border-green-950 transition-all duration-300 hover:bg-[#0D1A17] hover:cursor-pointer"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-4">
+              <img
+                src="assets/icons/ic_career.svg"
+                alt="Career Timeline"
+                class="w-10 h-10"
+              />
+            </div>
+            <h4 class="text-md font-medium mb-4">Career Timeline</h4>
+            <div class="space-y-6 text-sm text-gray-300">
+              <div>
+                <h5 class="font-medium">Business Development Manager</h5>
+                <p class="text-gray-300 mb-2">
+                  Seagrass | Abu Dhabi, UAE (2023–Present)
+                </p>
+                <p class="text-gray-300/40 text-xs">
+                  Leading carbon market origination and project partnerships for
+                  regional sustainability initiatives.
+                </p>
+              </div>
+              <div>
+                <h5 class="font-medium">Carbon Offset & EAC Sourcing</h5>
+                <p class="text-gray-300 mb-2">
+                  ClimatePartner | Munich, Germany (2022–2023)
+                </p>
+                <p class="text-gray-300/40 text-xs">
+                  Sourced $10M+ in renewable energy certificates and carbon
+                  offsets for European clients.
+                </p>
+              </div>
+              <div>
+                <h5 class="font-medium">Business Analyst</h5>
+                <p class="text-gray-300 mb-2">
+                  Evalueserve | Shanghai, China (2020–2021)
+                </p>
+                <p class="text-gray-300/40 text-xs">
+                  Led data analysis for Fortune 500 clients across APAC,
+                  focusing on market research and financial modeling.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div
+            class="flex flex-col p-6 border border-t-0 border-green-950 transition-all duration-300 hover:bg-[#0D1A17] hover:cursor-pointer"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-4">
+              <img
+                src="assets/icons/ic_education.svg"
+                alt="Education"
+                class="w-10 h-10"
+              />
+            </div>
+            <h4 class="text-md font-medium mb-4">Education</h4>
+            <div class="space-y-6 text-sm text-gray-300">
+              <div>
+                <h5 class="font-medium">
+                  Master's in Environmental Science and Engineering
+                </h5>
+                <p class="text-gray-300 mb-2">
+                  Tsinghua University | Beijing, China (2018–2020)
+                </p>
+                <p class="text-gray-300/40 text-xs">GPA 3.75/4.00</p>
+              </div>
+              <div>
+                <h5 class="font-medium">
+                  Bachelor's in Industrial Engineering
+                </h5>
+                <p class="text-gray-300 mb-2">
+                  Universitas Trisakti | Jakarta, Indonesia (2010–2014)
+                </p>
+                <p class="text-gray-300/40 text-xs">GPA 3.86/4.00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div
+            class="flex flex-col p-6 border border-t-0 border-r-0 border-green-950 transition-all duration-300 hover:bg-[#0D1A17] hover:cursor-pointer"
+          >
+            <div class="w-12 h-12 flex items-center justify-center mb-4">
+              <img
+                src="assets/icons/ic_certifcation.svg"
+                alt="Certifications"
+                class="w-10 h-10"
+              />
+            </div>
+            <h4 class="text-md font-medium mb-4">Technical Certifications</h4>
+            <div class="space-y-4 text-sm text-gray-300">
+              <div>
+                <h5 class="font-medium">Generative AI for Data Analysts</h5>
+                <p class="text-gray-300 mb-2">IBM (2023)</p>
+                <p class="text-gray-300/40 text-xs">
+                  Visualized spatial datasets using Python, creating interactive
+                  maps that reveal geographic trends and support data-driven
+                  decision making.
+                </p>
+              </div>
+              <div>
+                <h5 class="font-medium">CSRD & ESRS Reporting</h5>
+                <p class="text-gray-300 mb-2">GRI (2023)</p>
+                <p class="text-gray-300/40 text-xs">
+                  Visualized spatial datasets using Python, creating interactive
+                  maps that reveal geographic trends and support data-driven
+                  decision making.
+                </p>
+              </div>
+              <div>
+                <h5 class="font-medium">Advanced Analytics in R</h5>
+                <p class="text-gray-300 mb-2">SuperDataScience (2022)</p>
+                <p class="text-gray-300/40 text-xs">
+                  Visualized spatial datasets using Python, creating interactive
+                  maps that reveal geographic trends and support data-driven
+                  decision making.
+                </p>
+              </div>
+              <div>
+                <h5 class="font-medium">
+                  Spatial Analysis & Geospatial Data Science in Python
+                </h5>
+                <p class="text-gray-300 mb-2">Udemy (2025)</p>
+                <p class="text-gray-300/40 text-xs">
+                  Visualized spatial datasets using Python, creating interactive
+                  maps that reveal geographic trends and support data-driven
+                  decision making.
+                </p>
+              </div>
+              <div>
+                <h5 class="font-medium">
+                  Data Analysis Real World Use Cases - Hands on Python
+                </h5>
+                <p class="text-gray-300 mb-2">Udemy (2025)</p>
+                <p class="text-gray-300/40 text-xs">
+                  Visualized spatial datasets using Python, creating interactive
+                  maps that reveal geographic trends and support data-driven
+                  decision making.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section with Contact Form -->
+      <section id="contact" class="p-8 md:p-16 w-full rounded-lg bg-[#0D1A17]">
+        <div class="grid items-start grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Left side - Big typography -->
+          <div class="flex flex-col justify-center">
+            <h2 class="text-sm font-bold uppercase text-yellow-200 mb-2">
+              GET IN TOUCH
+            </h2>
+            <h2 class="text-3xl md:text-4xl font-light mb-6">
+              Let's Make Your Data Work
+            </h2>
+            <p
+              class="text-sm text-white/50 w-full md:w-3/4 text-gray-300 leading-relaxed"
+            >
+              Whether you need clearer dashboards, smarter forecasts, or help
+              navigating complex markets, I can turn your data into decisions
+              that move your business forward.
+            </p>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="">
+            <form
+              action="https://formspree.io/f/mdkljyzl"
+              method="POST"
+              class="space-y-6"
+            >
+              <div class="space-y-2">
+                <label class="block text-sm font-medium text-gray-100">
+                  Your email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 bg-[#0f2925] border border-green-950 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label class="block text-sm font-medium text-gray-100">
+                  Your message
+                </label>
+                <textarea
+                  name="message"
+                  required
+                  rows="4"
+                  class="w-full px-4 py-3 bg-[#0f2925] border border-green-950 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent resize-none"
+                  placeholder="Tell me about your project or question"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-3 px-6 bg-white rounded-3xl text-green-900 border border-white hover:bg-transparent hover:border hover:border-white hover:text-white font-medium rounded-3xl transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-[#0D1A17]"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <p class="text-sm text-center mt-16 text-white/30">
+        &copy; 2025 Jimmy Susanto
+      </p>
+    </main>
+
+    <!-- Modal -->
+    <div
+      id="portfolioModal"
+      class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden"
+    >
+      <div class="bg-[#0f2925] rounded-3xl p-8 max-w-2xl mx-4">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-xl font-medium">Case Study</h3>
+          <button
+            id="closeModal"
+            class="text-gray-400 hover:text-white text-2xl"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="text-gray-300">
+          <h3 class="text-3xl font-medium mb-2">
+            Carbon Credit Origination Dashboard
+          </h3>
+          <p class="text-sm text-gray-400 mb-6">
+            Published: January 15, 2024 at 14:30 UTC
+          </p>
+          <img
+            src="assets/img/dash.jpg"
+            class="w-full rounded-2xl mb-6"
+            alt=""
+          />
+          <p class="text-sm mb-6 leading-relaxed text-white/50">
+            A comprehensive Power BI dashboard that integrates data from
+            multiple carbon credit registries including Verra, Gold Standard,
+            and CDM. The dashboard provides real-time analytics on carbon credit
+            supply, pricing trends, project verification status, and portfolio
+            performance metrics. Features automated data ingestion, machine
+            learning-powered price forecasting, and interactive visualizations
+            for strategic decision-making in carbon market investments.
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-xs text-gray-400"
+              >Power BI • Python • SQL • Azure</span
+            >
+            <a
+              href="https://carbon-dashboard.streamlit.app/"
+              target="_blank"
+              class="px-4 py-2 border border-white bg-white hover:bg-transparent hover:text-white text-green-900 text-sm rounded-3xl trasition-colors duration-300"
+              onclick="event.stopPropagation()"
+            >
+              View Live Demo →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const moreAboutBtn = document.getElementById("moreAboutBtn");
+        const aboutText = document.getElementById("aboutText");
+        const readMoreBtn1 = document.getElementById("readMoreBtn1");
+        const readMoreBtn2 = document.getElementById("readMoreBtn2");
+        const readMoreBtn3 = document.getElementById("readMoreBtn3");
+        const modal = document.getElementById("portfolioModal");
+        const closeModal = document.getElementById("closeModal");
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const closeMobileMenu = document.getElementById("close-mobile-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        // Mobile menu functionality with sliding animation
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("hidden");
+          // Small delay to ensure the element is visible before adding transition
+          setTimeout(() => {
+            mobileMenu.classList.add("menu-open");
+          }, 10);
+          document.body.style.overflow = "hidden";
+        });
+
+        function closeMobileMenuFunc() {
+          mobileMenu.classList.remove("menu-open");
+          // Wait for transition to complete before hiding
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+          }, 300);
+          document.body.style.overflow = "auto";
+        }
+
+        closeMobileMenu.addEventListener("click", closeMobileMenuFunc);
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener("click", function (e) {
+          if (e.target === mobileMenu) {
+            closeMobileMenuFunc();
+          }
+        });
+
+        // Close mobile menu with Escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
+            closeMobileMenuFunc();
+          }
+        });
+
+        // Close mobile menu when clicking on navigation links
+        const mobileNavLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            closeMobileMenuFunc();
+          });
+        });
+
+        moreAboutBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          aboutText.classList.toggle("show");
+
+          // Update button text based on state
+          if (aboutText.classList.contains("show")) {
+            moreAboutBtn.textContent = "Less about me";
+          } else {
+            moreAboutBtn.textContent = "More about me";
+          }
+        });
+
+        // Modal functionality for all read more buttons
+        readMoreBtn1.addEventListener("click", function (e) {
+          e.preventDefault();
+          modal.classList.remove("hidden");
+        });
+
+        readMoreBtn2.addEventListener("click", function (e) {
+          e.preventDefault();
+          modal.classList.remove("hidden");
+        });
+
+        readMoreBtn3.addEventListener("click", function (e) {
+          e.preventDefault();
+          modal.classList.remove("hidden");
+        });
+
+        closeModal.addEventListener("click", function () {
+          modal.classList.add("hidden");
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
+            modal.classList.add("hidden");
+          }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+            modal.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
